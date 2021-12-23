@@ -1,0 +1,145 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Cửa hàng sách Online</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+</head>
+<body>
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-light" style="background-color:#f4e0fc">
+            <a class="navbar-brand" href="@Url.Action("Index", "Home")">
+                <img style="width: 150px; height:80px" src="~/Images/lg2.png" />
+
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto"style="font-weight:bold">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="@Url.Action("MuaNhieuNhat", "Home","Areas")" style="color: black;"><i class="fas fa-star"></i> Sản phẩm bán chạy</a>
+                    </li>
+                    @if (Session["MaNhanVien"] == null)
+                    {
+                        <li class="nav-item">
+                            <a class="nav-link" href="@Url.Action("Login", "Home","Areas")"style="color: black;">Đăng nhập</a>
+                        </li>
+                    }
+                    else
+                    {
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        @Session["HoTenNhanVien"].ToString()
+                        @if (Convert.ToInt32(Session["Quyen"]) == 1)
+                        {
+                            <span>(Nhân viên)</span>
+
+                        }
+                        else
+                        {
+                            <span>(Thủ kho)</span>
+                        }
+                    </a>
+                    @if (Convert.ToInt32(Session["Quyen"]) == 1)
+                    {
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+                            <a class="dropdown-item" href="@Url.Action("Index", "KhachHang")">Khách hàng</a>
+                            <a class="dropdown-item" href="@Url.Action("Index", "DatHang")">Đặt hàng</a>
+                            <a class="dropdown-item" href="@Url.Action("Index", "DatHang_ChiTiet")">Đặt hàng chi tiết</a>
+                         <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="@Url.Action("ChangePassword", "Home")">Đổi mật khẩu</a>
+                            <a class="dropdown-item" href="@Url.Action("Logout", "Home")">Đăng xuất</a>
+                        </div>
+
+                    }
+                    else
+                    {
+                        <div div class="dropdown-menu" aria-labelledby="navbarDropdown">                    
+                            <a class="dropdown-item" href="@Url.Action("Index", "Sach")">Sách</a>
+                            <a class="dropdown-item" href="@Url.Action("Index", "LoaiSach")">Loại sách</a>
+                            <a class="dropdown-item" href="@Url.Action("Index", "NhaXuatBan")">Nhà xuất bản</a>                       
+                        <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="@Url.Action("ChangePassword", "Home")">Đổi mật khẩu</a>
+                            <a class="dropdown-item" href="@Url.Action("Logout", "Home")">Đăng xuất</a>
+                        
+                         </div>
+                    }
+                </li>
+                    }
+                </ul>
+                <form class="form-inline my-2 my-lg-0" action="@Url.Action("Search","Home")" method="post">
+                    <input class="form-control mr-sm-2" type="search" name="TuKhoa" placeholder="Bạn muốn tìm gì?" />
+                    <button class="btn btn-outline-primary my-2 my-sm-0" type="submit"> Tìm kiếm <i class="fas fa-search"></i></button>
+                </form>
+            </div>
+        </nav>
+    </div>
+    <div class="container-fluid body-content">
+        @RenderBody()
+
+        <div class="card">
+            <div class="heading text-center">
+                <div class="head1" style="font-weight:bold; font-size:20px">Cửa hàng sách online Ngô Văn Thái</div>
+                <p class="bdr"></p>
+            </div>
+            <div class="card-body">
+                <div class="row m-0 pt-5">
+                    <div class="card col-12 col-md-3">
+                        <div class="card-content">
+                            <i class="fas fa-hand-holding-usd fa-3x"></i>
+                            <div class="card-title"> Chăm sóc khách hàng </div>
+                            <p><small>Hổ trọ tận nơi</small></p>
+                            <p><small>Nhân viên nhiệt tình</small></p>
+                            <p><small>Dịch vụ khuyến mãi</small></p>
+
+                        </div>
+                    </div>
+                    <div class="card col-12 col-md-3">
+                        <div class="card-content">
+                            <i class="far fa-handshake fa-3x"></i>
+                            <div class="card-title"> Dịch vụ </div>
+                            <p><small>Chính sách khuyến mãi</small></p>
+                            <p><small>Hướng dẫn mua Online</small></p>
+                            <p><small>Chính sách đổi trả</small></p>
+
+                        </div>
+                    </div>
+                    <div class="card col-12 col-md-3">
+                        <div class="card-content">
+                            <i class="fas fa-mobile-alt fa-3x"></i>
+                            <div class="card-title"> Đường dây hổ trợ </div>
+                            <p><small><i class="fas fa-phone fa-rotate-90 text-primary"></i> Kỹ thuật: 037 3856186</small></p>
+                            <p><small><i class="fas fa-phone fa-rotate-90 text-primary"></i> Tư vấn khách hàng: 058 5729248</small></p>
+                            <p><small><i class="fas fa-phone fa-rotate-90 text-primary"></i> Khiếu nại: 037 3856186</small></p>
+
+                        </div>
+                    </div>
+                    <div class="card col-12 col-md-3">
+                        <div class="card-content">
+                            <i class="fas fa-home fa-3x"></i>
+                            <div class="card-title"> Hệ thống cửa hàng </div>
+                            <p><small>Khóm 4, Mỹ Long, Long Xuyên, An Giang</small></p>
+                            <p><small>28/2 Ấp thị II, Mỹ Luông, Chợ Mới, An Giang</small></p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer row m-0">
+                <div>
+                    <p> <strong class="follow-text">Theo dõi chúng tôi tại</strong> <label class="footer-right"> <i class="fab fa-instagram"></i> <i class="fab fa-facebook-square"></i> <i class="fab fa-linkedin"></i> <i class="fab fa-twitter-square"></i> </label> </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

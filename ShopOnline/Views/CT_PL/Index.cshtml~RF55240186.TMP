@@ -1,0 +1,277 @@
+﻿@model IEnumerable<ShopOnline.Models.Sach>
+
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="0"></li>
+    </ol>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img style="height: 350px " class=" d-block w-100" src="~/Images/nha-gia-kim.jpg" alt="First slide">
+            <div class="carousel-caption d-none d-md-block">
+                <h5></h5>
+                <p></p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <img style="height: 400px " class="d-block w-100" src="~/Images/thiet_ke_bia_sach.png" alt="Second slide">
+        </div>
+        <div class="carousel-item">
+            <img style="height: 400px " class="d-block w-100" src="~/Images/Cách-thiết-kế-bìa-sách-ấn-tượng.jpg" alt="Third slide">
+        </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+<div class="card mt-3">
+    <h5 class="card-header" style="background-color: #f4e0fc">@ViewBag.Title</h5>
+    <section class="pt-5 pb-5 bg-white" style="padding-bottom: 2rem!important;">
+        <nav class="nav justify-content-center" style=" margin-top: -2.5rem;">
+            <h2 style="width: 90%; background: #f2f2f2; font-family: Times New Roman,Times,serif; padding: 0px; height: 40px; margin-bottom: 18px">
+                <a class="title" asp-controller="" asp-action="Index" style="text-decoration: none; color: #fff; font-size: 25px; margin-left: 10px; position: relative; font-size: 18px; line-height: 38px; font-weight: bold; font-family: 'Palatino Linotype'; background: #00cc66; padding: 13px 20px 5px 13px; text-transform: capitalize; margin: 0; ">
+                    Một số sản phẩm được ưa chuộng
+                    <span class="b-main__category-arrow" style="display: inline-block; width: 0; height: 0; margin-left: 2px; vertical-align: middle; border-top: 19px solid transparent; border-left: 12px solid #00cc66; border-right: 0px solid transparent; border-bottom: 18px solid transparent; position: absolute; top: 0; right: -12px;"></span>
+                </a>
+            </h2>
+        </nav>
+        <div class="container">
+            <div class="row">
+                <div class="col-12  ">
+                    <div id="carouselExampleIndicators1" class="carousel slide" data-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="row">
+
+                                    <div class="col-md-2 ">
+                                        <div class="card" style="min-height: 342px;">
+                                            <img class="img-fluid" alt="" src="~/Images/avt1.jpg" />
+                                            <span style="font-weight: bold; text-align: center; color: black; font-size: 13px; line-height: 23px; width: 46px; height: 37px; position: absolute; top: 0; right: 0; background: url(../Images/saleprice.png)">-20%</span>
+                                            <div class="card-body" style="text-align:center">
+                                                <div class="card-text" style="color: #444444; font-weight: bold; font-size: 14px;">78.000 VNĐ</div>
+                                                <div style="color: #999999; text-decoration: line-through; font-size: 11px !important;">98.000 VNĐ</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2 ">
+                                        <div class="card" style="min-height: 342px;">
+                                            <img class="img-fluid" alt="" src="~/Images/avt2.jpg" />
+                                            <span style="font-weight: bold; text-align: center; color: black; font-size: 13px; line-height: 23px; width: 46px; height: 37px; position: absolute; top: 0; right: 0; background: url(../Images/saleprice.png)">-19%</span>
+                                            <div class="card-body" style="text-align:center">
+                                                <div class="card-text" style="color: #444444; font-weight: bold; font-size: 14px;">60.750 VNĐ</div>
+                                                <div style="color: #999999; text-decoration: line-through; font-size: 11px !important;">75.000 VNĐ</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2 ">
+                                        <div class="card" style="min-height: 342px;">
+                                            <img class="img-fluid" alt="" src="~/Images/avt3.jpg" />
+                                            <span style="font-weight: bold; text-align: center; color: black; font-size: 13px; line-height: 23px; width: 46px; height: 37px; position: absolute; top: 0; right: 0; background: url(../Images/saleprice.png)">-30%</span>
+                                            <div class="card-body" style="text-align:center">
+                                                <div class="card-text" style="color: #444444; font-weight: bold; font-size: 14px;">73.150 VNĐ</div>
+                                                <div style="color: #999999; text-decoration: line-through; font-size: 11px !important;">77.000VNĐ</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2 ">
+                                        <div class="card" style="min-height: 342px;">
+                                            <img class="img-fluid" alt="" src="~/Images/avt4.jpg" />
+                                            <span style="font-weight: bold; text-align: center; color: black; font-size: 13px; line-height: 23px; width: 46px; height: 37px; position: absolute; top: 0; right: 0; background: url(../Images/saleprice.png)">-15%</span>
+                                            <div class="card-body" style="text-align:center">
+                                                <div class="card-text" style="color: #444444; font-weight: bold; font-size: 14px;">85.000 VNĐ</div>
+                                                <div style="color: #999999; text-decoration: line-through; font-size: 11px !important;">100.000 VNĐ</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2 ">
+                                        <div class="card" style="min-height: 342px;">
+                                            <img class="img-fluid" alt="" src="~/Images/avt5.jpg" />
+                                            <span style="font-weight: bold; text-align: center; color: black; font-size: 13px; line-height: 23px; width: 46px; height: 37px; position: absolute; top: 0; right: 0; background: url(../Images/saleprice.png)">-3%</span>
+                                            <div class="card-body" style="text-align:center">
+                                                <div class="card-text" style="color: #444444; font-weight: bold; font-size: 14px;">335.500 VNĐ</div>
+                                                <div style="color: #999999; text-decoration: line-through; font-size: 11px !important;">350.000 VNĐ</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2 ">
+                                        <div class="card" style="min-height: 342px;">
+                                            <img class="img-fluid" alt="" src="~/Images/avt6.jpg" />
+                                            <span style="font-weight: bold; text-align: center; color: black; font-size: 13px; line-height: 23px; width: 46px; height: 37px; position: absolute; top: 0; right: 0; background: url(../Images/saleprice.png)">-3%</span>
+                                            <div class="card-body" style="text-align:center">
+                                                <div class="card-text" style="color: #444444; font-weight: bold; font-size: 14px;">130.950 VNĐ</div>
+                                                <div style="color: #999999; text-decoration: line-through; font-size: 11px !important;">135.000 VNĐ</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+                            <div class="carousel-item">
+                                <div class="row">
+
+                                    <div class="col-md-2 ">
+                                        <div class="card" style="min-height: 342px;">
+                                            <img class="img-fluid" alt="" src="~/Images/avt7.jpg" />
+                                            <span style="font-weight: bold; text-align: center; color: black; font-size: 13px; line-height: 23px; width: 46px; height: 37px; position: absolute; top: 0; right: 0; background: url(../Images/saleprice.png)">-15%</span>
+                                            <div class="card-body" style="text-align:center">
+                                                <div class="card-text" style="color: #444444; font-weight: bold; font-size: 14px;">57.800 VNĐ</div>
+                                                <div style="color: #999999; text-decoration: line-through; font-size: 11px !important;">68.000 VNĐ</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2 ">
+                                        <div class="card" style="min-height: 342px;">
+                                            <img class="img-fluid" alt="" src="~/Images/avt8.jpg" />
+                                            <span style="font-weight: bold; text-align: center; color: black; font-size: 13px; line-height: 23px; width: 46px; height: 37px; position: absolute; top: 0; right: 0; background: url(../Images/saleprice.png)">-18%</span>
+                                            <div class="card-body" style="text-align:center">
+                                                <div class="card-text" style="color: #444444; font-weight: bold; font-size: 14px;">138.600 VNĐ</div>
+                                                <div style="color: #999999; text-decoration: line-through; font-size: 11px !important;">169.000 VNĐ</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2 ">
+                                        <div class="card" style="min-height: 342px;">
+                                            <img class="img-fluid" alt="" src="~/Images/avt9.jpg" />
+                                            <span style="font-weight: bold; text-align: center; color: black; font-size: 13px; line-height: 23px; width: 46px; height: 37px; position: absolute; top: 0; right: 0; background: url(../Images/saleprice.png)">-30%</span>
+                                            <div class="card-body" style="text-align:center">
+                                                <div class="card-text" style="color: #444444; font-weight: bold; font-size: 14px;">55.300 VNĐ</div>
+                                                <div style="color: #999999; text-decoration: line-through; font-size: 11px !important;">79.000 VNĐ</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2 ">
+                                        <div class="card" style="min-height: 342px;">
+                                            <img class="img-fluid" alt="" src="~/Images/avt10.jpg" />
+                                            <span style="font-weight: bold; text-align: center; color: black; font-size: 13px; line-height: 23px; width: 46px; height: 37px; position: absolute; top: 0; right: 0; background: url(../Images/saleprice.png)">-15%</span>
+                                            <div class="card-body" style="text-align:center">
+                                                <div class="card-text" style="color: #444444; font-weight: bold; font-size: 14px;">84.150 VNĐ</div>
+                                                <div style="color: #999999; text-decoration: line-through; font-size: 11px !important;">99.000 VNĐ</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2 ">
+                                        <div class="card" style="min-height: 342px;">
+                                            <img class="img-fluid" alt="" src="~/Images/avt11.jpg" />
+                                            <span style="font-weight: bold; text-align: center; color: black; font-size: 13px; line-height: 23px; width: 46px; height: 37px; position: absolute; top: 0; right: 0; background: url(../Images/saleprice.png)">-20%</span>
+                                            <div class="card-body" style="text-align:center">
+                                                <div class="card-text" style="color: #444444; font-weight: bold; font-size: 14px;">143.200 VNĐ</div>
+                                                <div style="color: #999999; text-decoration: line-through; font-size: 11px !important;">179.00 VNĐ</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2 ">
+                                        <div class="card" style="min-height: 342px;">
+                                            <img class="img-fluid" alt="" src="~/Images/avt12.jpg" />
+                                            <span style="font-weight: bold; text-align: center; color: black; font-size: 13px; line-height: 23px; width: 46px; height: 37px; position: absolute; top: 0; right: 0; background: url(../Images/saleprice.png)">-10%</span>
+                                            <div class="card-body" style="text-align:center">
+                                                <div class="card-text" style="color: #444444; font-weight: bold; font-size: 14px;">143.100 VNĐ</div>
+                                                <div style="color: #999999; text-decoration: line-through; font-size: 11px !important;">159.00 VNĐ</div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev " style="color:#3150a2;justify-content: left;" href="#carouselExampleIndicators1" role="button" data-slide="prev">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-left-circle" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-4.5-.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z" />
+                            </svg>
+                        </a>
+                        <a class="carousel-control-next  " style="color:#3150a2; justify-content:right;" href="#carouselExampleIndicators1" role="button" data-slide="next">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-right-circle" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+    <h2 style="width: 90%; background: #f2f2f2; font-family: Times New Roman,Times,serif; padding: 0px; height: 40px; margin-bottom: 18px; text-align:center">
+        DANH SÁCH SẢN PHẨM
+    </h2>
+    <nav class="navbar navbar-expand-lg h2-nav" style="background-color: #21afbd; text-align:center">
+
+        <div class="collapse navbar-collapse hover-dropdown" id="header2" style="margin-left: 455px;">
+            <ul class="navbar-nav" style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-weight:bold;font-size:20px; text-align:center">
+
+                <li class="nav-item active" style="text-align:center"><a class="nav-link" href="@Url.Action("Index","Home")" style="color: white;"><strong>All</strong></a></li>
+                <li class="nav-item">
+                    <a class="nav-link" href="@Url.Action("Index", "CT_PL")" style="color: white;"><i class="fas fa-star"></i> Chính Chị - Pháp Luật</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="@Url.Action("Index", "GioHang")" style="color: white;"><i class="fas fa-cart-plus"></i> Giỏ hàng</a>
+                </li>
+            </ul>
+
+
+        </div>
+
+    </nav>
+    @*<div>
+            @using (Html.BeginForm("Index", "Home", FormMethod.Get))
+            {
+
+                <select class="custom-select w-25" onchange=" location = '/Home?movieGenre='+this.value;" id="movieGenre" name="movieGenre" style="width: 15% !important; margin-top: 40px; margin-left: 20px;background-color:gainsboro">
+                    <option value="All">Chọn tất cả</option>
+                    @foreach (var item in ViewBag.sp)
+                    {
+                        if (ViewBag.loaisp == item)
+                        {
+                            <option value="@item" selected>
+                                @item
+                            </option>
+                        }
+                        else
+                        {
+                            <option value="@item">
+                                @item
+                            </option>
+                        }
+
+
+                    }
+
+                </select>
+            }
+        </div>*@
+
+
+    <div class="card-body">
+        <div class="card-deck">
+            @foreach (var item in Model)
+            {
+                <div class=" col-xl-3 col-lg-3 col-md-4 col-sm-6 shadow" style="margin-bottom: 40px;">
+                    <img src="~/@item.HinhAnhBia" class="card-img-top" alt="...">
+                    <div class="card-body text-center " style="min-height: 200px;">
+                        <h5 class="card-title">@item.TenSach</h5>
+                        <p class="card-text">@item.DonGia đồng</p>
+                    </div>
+                    <div class="card-footer m-auto bg-white" style="text-align:center">
+                        <a href="@Url.Action("ThemVaoGio", "GioHang", new { maSP = item.ID })" class="btn btn-danger fas fa-cart-plus"> Giỏ hàng</a>
+                        <a href="@Url.Action("ChiTiet", "Home", new { ID = item.ID })" class="btn btn-info fas fa-eye"> Chi tiết</a>
+                    </div>
+                </div>
+            }
+        </div>
+
+    </div>
+
+</div>
